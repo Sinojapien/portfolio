@@ -1,7 +1,7 @@
 import React, { useCallback, useRef } from "react";
 
 import type { InferGetServerSidePropsType, GetServerSideProps } from "next";
-import { Noto_Sans } from "next/font/google";
+// import { Noto_Sans } from "next/font/google";
 import { NextSeo, type NextSeoProps } from "next-seo";
 
 import IntroductionView from "@/views/IntroductionView";
@@ -11,10 +11,11 @@ import ContactView from "@/views/ContactView";
 
 import { items } from "@/views/ExperienceView/constants";
 
-const font = Noto_Sans({
-  weight: "400",
-  subsets: ["latin"],
-});
+// const font = Noto_Sans({
+//   weight: "400",
+//   subsets: ["latin"],
+//   adjustFontFallback: false,
+// });
 
 export const getServerSideProps: GetServerSideProps<{
   seo: NextSeoProps;
@@ -126,7 +127,9 @@ const Page = ({
   return (
     <>
       <NextSeo {...seo} />
-      <main className={`${font.className}`}>
+      <main
+      // className={`${font.className}`}
+      >
         <IntroductionView
           onDownload={onDownload}
           onAbout={onAbout}
