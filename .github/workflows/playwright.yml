@@ -3,11 +3,11 @@ name: Playwright Tests
 on:
   push:
     branches: [main]
-    paths: ["servers/front-end-portfolio/**", ".github/workflows/**"]
+    # paths: ["servers/front-end-portfolio/**", ".github/workflows/**"]
   pull_request:
     branches: [main]
     types: [opened, synchronize, reopened]
-    paths: ["servers/front-end-portfolio/**", ".github/workflows/**"]
+    # paths: ["servers/front-end-portfolio/**", ".github/workflows/**"]
 
 jobs:
   test:
@@ -21,21 +21,21 @@ jobs:
           node-version: 24
           cache: true
 
-      - uses: pnpm/setup@v1
-        with:
-          version: 12
-          runtime: node@24
-          cache: true
+      # - uses: pnpm/setup@v1
+      #   with:
+      #     version: 12
+      #     runtime: node@24
+      #     cache: true
 
       - name: Install dependencies
         run: pnpm install
 
       - name: Install Playwright Browsers
-        working-directory: "./servers/front-end-portfolio"
+        # working-directory: "./servers/front-end-portfolio"
         run: pnpm playwright install --with-deps
 
       - name: Run Playwright tests
-        working-directory: "./servers/front-end-portfolio"
+        # working-directory: "./servers/front-end-portfolio"
         run: pnpm playwright test
         env:
           PORTFOLIO_RESUME_URL: ${{secrets.PORTFOLIO_RESUME_URL}}
@@ -45,7 +45,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         if: always()
-        working-directory: "./servers/front-end-portfolio"
+        # working-directory: "./servers/front-end-portfolio"
         with:
           name: playwright-report
           path: playwright-report/
