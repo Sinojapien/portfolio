@@ -3,11 +3,11 @@ name: Playwright Tests
 on:
   push:
     branches: [main]
-    # paths: ["servers/front-end-portfolio/**", ".github/workflows/**"]
+    paths: ["servers/front-end-portfolio/**", ".github/workflows/**"]
   pull_request:
     branches: [main]
     types: [opened, synchronize, reopened]
-    # paths: ["servers/front-end-portfolio/**", ".github/workflows/**"]
+    paths: ["servers/front-end-portfolio/**", ".github/workflows/**"]
 
 jobs:
   test:
