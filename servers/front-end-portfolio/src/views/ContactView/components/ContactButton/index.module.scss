@@ -12,7 +12,9 @@
   text-decoration: none;
   text-align: center;
 
-  transition: background-color .33s, box-shadow .33s;
+  transition:
+    background-color 0.33s,
+    box-shadow 0.33s;
 }
 
 .anchorButton:hover {

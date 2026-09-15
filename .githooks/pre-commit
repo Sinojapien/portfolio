@@ -2,6 +2,6 @@
 
 echo "*****running pre-commit git hook*****"
 
-npm run format
+pnpm run format
 
-npm run lint
+pnpm run lint
