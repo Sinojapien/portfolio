@@ -1,5 +1,5 @@
 packages:
-  - servers/*
+  - "servers/*"
 allowBuilds:
   "@parcel/watcher": true
   sharp: true

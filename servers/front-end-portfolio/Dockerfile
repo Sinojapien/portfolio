@@ -6,9 +6,9 @@ RUN npm install -g pnpm
 
 COPY ./ /app/
 
-RUN rm -rf node_modules && rm pnpm-lock.yaml
+RUN rm -rf node_modules
 
-RUN --mount=type=cache,id=pnpm,target=/pnpm/store pnpm install
+RUN --mount=type=cache,id=pnpm,target=/pnpm/store pnpm install --frozen-lockfile --prod --filter front-end-portfolio
 RUN pnpm front-end-portfolio run build
 
 EXPOSE 3000
