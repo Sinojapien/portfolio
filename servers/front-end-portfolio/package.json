@@ -1,0 +1,39 @@
+{
+  "name": "front-end-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "init": "cp -r -v scripts/* .git/hooks/ && chmod +x .git/hooks/* && echo 'githooks initialized'",
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "test": "playwright test",
+    "test:init": "playwright install --with-deps"
+  },
+  "dependencies": {
+    "axios": "^1.5.1",
+    "lodash": "^4.17.21",
+    "next": "^13.5.11",
+    "next-seo": "^6.1.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-icons": "^4.11.0",
+    "sharp": "^0.32.6",
+    "typescript": "5.2.2"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.39.0",
+    "@types/lodash": "^4.14.198",
+    "@types/node": "^20.6.0",
+    "@types/react": "^18.2.21",
+    "@types/react-dom": "^18.2.7",
+    "autoprefixer": "^10.4.16",
+    "eslint": "^8.49.0",
+    "eslint-config-next": "^13.4.19",
+    "eslint-config-prettier": "^9.0.0",
+    "postcss": "^8.4.31",
+    "sass": "^1.69.0",
+    "tailwindcss": "^3.3.3"
+  }
+}
