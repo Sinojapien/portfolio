@@ -16,7 +16,6 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 24
-          cache: true
 
       - uses: pnpm/setup@v1
         with:
